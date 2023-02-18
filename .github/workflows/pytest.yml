@@ -47,7 +47,3 @@ jobs:
       - name: Run test suite
         run: |
           pipenv run test -v
-
-      - name: run boto3
-        run: |
-          python .github/workflows/demo.py
