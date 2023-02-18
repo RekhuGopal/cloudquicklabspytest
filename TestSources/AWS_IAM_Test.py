@@ -1,10 +1,4 @@
-import boto3
-
-
-# Create IAM client
-iam = boto3.client('iam')
-
-def aws_iam_check_if_policy_exist():
+def aws_iam_check_if_policy_exist(iam):
     try:
         # Get a policy
         response = iam.get_policy(
@@ -17,7 +11,7 @@ def aws_iam_check_if_policy_exist():
     else:
          return True
 
-def aws_iam_check_if_role_exist():
+def aws_iam_check_if_role_exist(iam):
     try:
         # Get a policy
         response = iam.get_role(
