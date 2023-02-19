@@ -9,7 +9,7 @@ permissions:
       contents: read  
 
 jobs:
-  test:
+  AWS Deployment Testing:
     runs-on: ubuntu-latest
     timeout-minutes: 10
 
