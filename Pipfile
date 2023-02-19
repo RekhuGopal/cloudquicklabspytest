@@ -10,7 +10,6 @@ pytest = "*"
 boto3 = "*"
 moto = "*"
 
-
 [requires]
 python_version = "3.9"
 
