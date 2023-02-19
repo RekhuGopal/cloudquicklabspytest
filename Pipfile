@@ -7,13 +7,9 @@ name = "pypi"
 
 [dev-packages]
 pytest = "*"
-pylint = "*"
-pytest = "*"
-pytest-cov = "*"
 boto3 = "*"
 moto = "*"
-placebo = "*"
-sphinx = "*"
+
 
 [requires]
 python_version = "3.9"
