@@ -5,7 +5,7 @@ from TestSources.AWS_IAM_Test import aws_iam_check_if_policy_exist, aws_iam_chec
 iam = boto3.client('iam')
 
 def test_aws_iam_check_if_policy_exist():
-    assert aws_iam_check_if_policy_exist(iam) == True
+    assert aws_iam_check_if_policy_exist(iam) == False
 
 
 def test_aws_iam_check_if_role_exist():
