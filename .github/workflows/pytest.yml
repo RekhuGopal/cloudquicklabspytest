@@ -34,7 +34,7 @@ jobs:
           python -m pip install --upgrade boto3 moto pytest
 
       - name: Run AWS test suite
-        working-directory: ./AWSTests
+        working-directory: ./AWSTestExecutions
         run: |
           pytest -v
 
