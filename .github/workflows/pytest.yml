@@ -43,8 +43,7 @@ jobs:
         if: steps.cache-pipenv.outputs.cache-hit != 'true'
         run: |
           pipenv install --deploy --dev
-          pipenv install boto3
-        
+
       - name: Run test suite
         run: |
           pipenv run test -v
