@@ -36,11 +36,11 @@ jobs:
       - name: Run AWS test suite
         working-directory: ./AWSTestExecutions
         run: |
-          pytest  --github-report -v --cov=AWSTestCases --cov-report html
+          pytest  --github-report -v --cov=AWSTestCases --cov-report xml:cov.xml
 
       - uses: 5monkeys/cobertura-action@master
         with:
-          path: ./htmlcov/coverage.html
+          path: ./cov.xml
           minimum_coverage: 75
 
 
