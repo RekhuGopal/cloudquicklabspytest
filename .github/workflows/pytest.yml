@@ -38,5 +38,10 @@ jobs:
         run: |
           pytest  --github-report -v --cov=AWSTestCases --cov-report html
 
+      - uses: 5monkeys/cobertura-action@master
+        with:
+          path: ./htmlcov/coverage.html
+          minimum_coverage: 75
+
 
 
