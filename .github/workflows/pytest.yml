@@ -36,7 +36,8 @@ jobs:
       - name: Run AWS test suite
         working-directory: ./AWSTestExecutions
         run: |
-          pytest  --github-report -v --cov=AWSTestCases --cov-report xml:cov.xml
+          pytest  --github-report -v --cov=AWSTestCases --cov-report xml:coverage.xml
+          pwd
 
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
