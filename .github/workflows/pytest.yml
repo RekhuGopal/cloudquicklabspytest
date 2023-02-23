@@ -41,7 +41,7 @@ jobs:
       - name: Generate Report
         run: |
           pip install coverage
-          coverage run -m cloudquicklabspytest
+          coverage run -m AWSTestExecutions
 
       - name: Upload Coverage to Codecov
         uses: codecov/codecov-action@v2
