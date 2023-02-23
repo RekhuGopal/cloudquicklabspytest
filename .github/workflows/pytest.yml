@@ -31,19 +31,12 @@ jobs:
 
       - name: Install required python modules
         run: |
-          python -m pip install --upgrade boto3 moto pytest pytest-github-report
+          python -m pip install --upgrade boto3 moto pytest pytest-github-report pytest-cov
 
       - name: Run AWS test suite
         working-directory: ./AWSTestExecutions
         run: |
-          pytest  --github-report -v 
+          pytest  --github-report -v --cov blackjack --cov-report html
 
-      - name: Generate Report
-        run: |
-          pip install coverage
-          coverage run -m AWSTestExecutions
-
-      - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v2
 
 
