@@ -36,7 +36,7 @@ jobs:
       - name: Run AWS test suite
         working-directory: ./AWSTestExecutions
         run: |
-          pytest  --github-report -v --cov blackjack --cov-report html
+          pytest  --github-report -v --cov=AWSTestCases
 
 
 
