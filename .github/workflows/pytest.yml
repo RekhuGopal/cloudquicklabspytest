@@ -36,7 +36,7 @@ jobs:
       - name: Run AWS test suite
         working-directory: ./AWSTestExecutions
         run: |
-          pytest  --github-report -v --instafail --cov=./cloudquicklabspytest --cov-report xml 
+          pytest  --github-report -v  --cov=./cloudquicklabspytest --cov-report xml 
 
       - name: Run Code Coverage
         uses: 5monkeys/cobertura-action@master
