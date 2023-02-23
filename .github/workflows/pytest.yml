@@ -36,12 +36,10 @@ jobs:
       - name: Run AWS test suite
         working-directory: ./AWSTestExecutions
         run: |
-          pytest  --github-report -v --cov=./AWSTestExecutions --cov-report xml 
+          pytest  --github-report -v 
+          coverage run -m unittest
 
-      - name: Run Code Coverage
-        uses: 5monkeys/cobertura-action@master
-        with:
-          minimum_coverage: 75
-          path: ./coverage.xml
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v2
 
 
