@@ -40,7 +40,8 @@ jobs:
 
       - name: Run Code Coverage
         uses: 5monkeys/cobertura-action@master
+        working-directory: ./AWSTestExecutions
         with:
-          path: AWSTestExecutions/test.xml
+          path: ./test.xml
           minimum_coverage: 75
 
