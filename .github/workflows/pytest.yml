@@ -38,3 +38,9 @@ jobs:
         run: |
           pytest  --github-report -v
 
+      - name: Run Code Coverage
+        uses: 5monkeys/cobertura-action@master
+        with:
+          path: src/test.xml
+          minimum_coverage: 75
+
