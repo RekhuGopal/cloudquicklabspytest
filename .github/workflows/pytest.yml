@@ -31,7 +31,7 @@ jobs:
 
       - name: Install required python modules
         run: |
-          python -m pip install --upgrade boto3 moto pytest pytest-github-report pytest-cov
+          python -m pip install --upgrade boto3 moto pytest pytest-github-report pytest-cov coverage
 
       - name: Run AWS test suite
         working-directory: ./AWSTestExecutions
