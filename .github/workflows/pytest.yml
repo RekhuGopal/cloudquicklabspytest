@@ -38,10 +38,8 @@ jobs:
         run: |
           pytest  --github-report -v --cov=AWSTestCases --cov-report xml:cov.xml
 
-      - uses: 5monkeys/cobertura-action@master
-        with:
-          path: ./cov.xml
-          minimum_coverage: 75
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
 
 
 
