@@ -42,5 +42,10 @@ jobs:
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v3
 
+      - name: Code Coverage Summary Report
+        uses: irongut/CodeCoverageSummary@v1.3.0
+        with:
+          filename: coverage.xml
+
 
 
