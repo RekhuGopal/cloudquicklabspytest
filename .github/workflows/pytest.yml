@@ -45,7 +45,7 @@ jobs:
       - name: Publish code coverage results
         uses: 5monkeys/cobertura-action@master
         with:
-          path: ./coverage.xml
+          path: ${{ github.workspace }}/./coverage.xml
           minimum_coverage: 75
 
 
