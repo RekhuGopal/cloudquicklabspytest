@@ -34,7 +34,7 @@ jobs:
           az account show
           az group list
     
-      - name: Run AWS test suite
+      - name: Run Azure test suite
         working-directory: ./AzureTestExecutions
         run: |
           pytest  --github-report -v --cov=AzureTestCases --cov-report xml:coverage.xml
