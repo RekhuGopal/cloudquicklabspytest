@@ -1,0 +1,7 @@
+pytest
+pytest-github-report
+pytest-cov
+coverage
+azure-mgmt-resource
+azure-mgmt-storage
+azure-identity
